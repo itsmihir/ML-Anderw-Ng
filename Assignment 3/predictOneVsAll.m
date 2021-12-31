@@ -12,7 +12,7 @@ m = size(X, 1);
 num_labels = size(all_theta, 1);
 
 % You need to return the following variables correctly 
-p = zeros(size(X, 1), 1);
+p = zeros(m, 1);
 
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
@@ -30,12 +30,14 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
+p = X * all_theta';
+[maxm,p] = max(p');
 
 
-
-
-
-
+% Dim
+% all_theta = num_labels * (n + 1);
+% X = m * (n + 1);
+% p = m * 1
 % =========================================================================
 
 
